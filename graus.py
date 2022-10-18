@@ -3,8 +3,8 @@ from flask import Flask, request
 # Criar o objeto Flask app:
 app = Flask(__name__)
 
-# http://127.0.0.1:5000/testes/1?celsius=10
-@app.route('/testes/1')
+# http://127.0.0.1:5000/graus/1?celsius=10
+@app.route('/graus/1')
 def teste_query_string_1_agurmento_get():
   celsius = request.args.get('celsius')
   fahrenheit = (float(celsius) * 1.8) + 32
@@ -14,3 +14,4 @@ def teste_query_string_1_agurmento_get():
 if __name__ == '__main__':
 # Executar app no modo debug (default) na porta 5000 (default):
   app.run(debug = True, port = 5000)
+
